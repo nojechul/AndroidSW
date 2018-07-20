@@ -152,6 +152,7 @@
         android:layout_height="40sp"
         android:text="시작"
         android:textSize="20sp"
+        android:fontFamily="@font/nanumbarungothic"
         android:id="@+id/start"
         android:textColor="#516AF5"
         android:background="@drawable/login_button"

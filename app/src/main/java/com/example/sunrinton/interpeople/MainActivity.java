@@ -21,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
     TextView db_show;
     String tmp;
 
-    Button button;
+    int db_in;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int db_in = 0;
+        db_in = 0;
 
         //to remove "information bar" above the action bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -41,19 +41,10 @@ public class MainActivity extends AppCompatActivity {
         bg2 = findViewById(R.id.my_noise);
         db_show = findViewById(R.id.db);
 
-        button = findViewById(R.id.button);
-
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "눌림", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), ComplainedListActivity.class);
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
@@ -62,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
         tmp = Integer.toString(db_in);
         db_show.setText(tmp + "dB");
+
+
 
 
         if (db_in >= 30) {

@@ -2,7 +2,8 @@ package com.example.sunrinton.interpeople;
 
 public class CalendarData {
 
-    String date, work;
+    String date;
+    String work;
 
     public CalendarData(String date, String work) {
         this.date = date;
