@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#fff"
-    >
+    android:background="#f8f8f8"
+    tools:context=".MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#fff"
+        android:background="#516AF5"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -27,18 +25,18 @@
                 android:id="@+id/menu"
                 android:layout_width="30sp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:src="@drawable/menuwhite" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="InterPeople"
-                android:textColor="#516AF5"
-                android:textSize="25sp"
-                android:fontFamily="@font/nanumbarungothicbold"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="InterPeople"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
 
         </RelativeLayout>
 
@@ -46,20 +44,64 @@
 
     <!--4E66ED-->
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250sp"
-        android:background="#4E66ED">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="나의 소음"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:textAlignment="center"
-            />
+            android:layout_height="400sp"
+            android:background="#4E66ED"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125sp"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="나의 소음"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="0dB"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400sp"
+            android:layout_height="700sp"
+            android:layout_marginBottom="50sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/main_graph"
+            android:backgroundTint="#fff"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소음 기록"
+                android:textSize="40sp"
+                android:textColor="#000"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:layout_marginTop="30sp"
+                android:layout_marginLeft="30sp"
+                />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

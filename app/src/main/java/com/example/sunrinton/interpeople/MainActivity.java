@@ -1,12 +1,11 @@
 package com.example.sunrinton.interpeople;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
         menu = findViewById(R.id.menu);
 
-
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "눌림", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
