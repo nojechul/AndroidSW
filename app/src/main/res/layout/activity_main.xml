@@ -7,12 +7,13 @@
     android:background="#f8f8f8"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#516AF5"
+        android:background="@color/colorIP"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -36,7 +37,7 @@
                 android:fontFamily="@font/nanumbarungothicbold"
                 android:text="InterPeople"
                 android:textColor="#FFFFFF"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
 
         </RelativeLayout>
 
@@ -49,9 +50,10 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/my_noise"
             android:layout_width="match_parent"
             android:layout_height="400sp"
-            android:background="#4E66ED"
+            android:background="@color/colorIP"
             android:orientation="vertical">
 
             <TextView
@@ -65,6 +67,7 @@
                 android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/db"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50sp"
@@ -98,7 +101,11 @@
                 android:layout_marginLeft="30sp"
                 />
 
-
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complained"/>
 
         </LinearLayout>
 
